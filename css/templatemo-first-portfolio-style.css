@@ -384,7 +384,6 @@ strong {
 
 .custom-border-btn {
   background: transparent;
-  border: 2px solid var(--border-color);
   color: var(--white-color);
 }
 
