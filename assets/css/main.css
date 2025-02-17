@@ -64,6 +64,15 @@
   --contrast-color: #ffffff;
 }
 
+.dark-background-opacity {
+  --background-color: rgba(0, 0, 0, 0);
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #151f2b;
+  --contrast-color: #ffffff;
+  transition: background-color 0s ease;
+}
+
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
@@ -477,10 +486,13 @@ h6 {
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
 .page-title {
+  position: fixed;
+  top: 0;
+  width: 100%;
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 25px 0;
-  position: relative;
+  z-index: 1;
 }
 
 .page-title h1 {
@@ -524,7 +536,7 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 60px;
+  padding-bottom: 0px;
   position: relative;
 }
 
@@ -699,6 +711,28 @@ section,
   margin: auto;
 }
 
+.gallery-container .horizontal-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gallery-container .gallery {
+  margin-bottom: 40px;
+}
+
+.gallery-container .mini-button {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+
 .gallery {
   display: flex;
   transition: transform 0.5s ease;
@@ -707,7 +741,7 @@ section,
 .gallery div {
   min-width: 50%;
   box-sizing: border-box;
-  padding: 5px;
+  padding-right: 10px;
 }
 
 .gallery img {
@@ -716,8 +750,42 @@ section,
 }
 
 .description {
-  text-align: center;
+  text-align: left;
   margin-top: 10px;
+  margin-left: 5px;
+}
+
+.description p{
+  margin: 0;
+}
+
+.description .title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.description .content {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.description .emphasis {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+
+
+.detail-button {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
 }
 
 .button {
@@ -1246,4 +1314,21 @@ section,
   max-height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+/*--------------------------------------------------------------
+# About detail section
+--------------------------------------------------------------*/
+.about-detail-section .img-container {
+  position: relative;
+  padding: 0;
+}
+
+.about-detail-section .img-container .img-box {
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  width: 100%; 
+  height: 0; 
+  padding-bottom: 200%;
 }

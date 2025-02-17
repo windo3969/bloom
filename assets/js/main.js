@@ -251,4 +251,12 @@
   // 초기 이미지 설정
   updateGallery();
 
+  // 페이지 타이틀 투명도 조정
+  window.addEventListener('scroll', function() {
+    const imgContainer = document.querySelector('.page-title');
+    const scrollPosition = window.scrollY;
+    const maxOpacity = 0.6;
+    const opacity = Math.min(scrollPosition / 500, maxOpacity); // 스크롤에 따라 투명도 조정
+    imgContainer.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+  });
 })();
