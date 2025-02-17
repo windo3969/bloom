@@ -731,7 +731,17 @@ section,
   cursor: pointer;
 }
 
-
+.gallery-container .button {
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
 
 .gallery {
   display: flex;
@@ -773,8 +783,6 @@ section,
   font-size: 0.8rem;
   font-weight: 400;
 }
-
-
 
 .detail-button {
   position: absolute;
@@ -821,13 +829,12 @@ section,
 .portfolio .portfolio-filters li {
   cursor: pointer;
   display: inline-block;
-  padding: 0;
+  padding: 10px 20px;
   font-size: 14px;
   font-weight: 400;
   margin: 0 10px;
   line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 10px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -1298,7 +1305,6 @@ section,
   color: var(--accent-color);
 }
 
-
 /*--------------------------------------------------------------
 # advertisement slider section
 --------------------------------------------------------------*/
@@ -1331,4 +1337,73 @@ section,
   width: 100%; 
   height: 0; 
   padding-bottom: 200%;
+}
+
+/*--------------------------------------------------------------
+# Content detail section
+--------------------------------------------------------------*/
+.content-detail-section .img-container {
+  position: relative;
+  padding: 0;
+  margin-bottom: 60px;
+}
+
+.content-detail-section .img-container .img-box {
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  width: 100%; 
+  height: 0; 
+  padding-bottom: 133.33%;
+}
+
+.content-detail-section .gallery-filters {
+  padding: 0;
+  list-style: none; 
+  text-align: center;
+}
+
+.content-detail-section .gallery-filters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0px 10px;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  background-color: rgb(220, 220, 220);
+  border-radius: 10px;
+  color:gray;
+}
+
+.content-detail-section .gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  transition: transform 0.5s ease;
+}
+
+.content-detail-section .gallery div {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.content-detail-section .gallery-filters li:hover,
+.content-detail-section .gallery-filters li.filter-active {
+  color: white;
+  background-color: var(--accent-color);
+}
+
+@media (max-width: 575px) {
+  .content-detail-section .gallery-filters li {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+
+  .content-detail-section .gallery .category-item {
+    margin-bottom: 10px;
+  }
 }

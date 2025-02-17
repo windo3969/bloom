@@ -228,28 +228,30 @@
 
 
   // 이미지 슬라이더 초기화
-  const gallery = document.getElementById('gallery');
-  const images = gallery.querySelectorAll('div');
-  const totalImages = images.length;
-  let currentIndex = 0;
-  const imagesPerView = 2; // 한 화면에 보이는 이미지 수
+  document.querySelectorAll('.portfolio .gallery-container').forEach((container, index) => {
+    const gallery = container.querySelector('.portfolio .gallery-container .gallery');
+    const images = gallery.querySelectorAll('div');
+    const totalImages = images.length;
+    let currentIndex = 0;
+    const imagesPerView = 2; // 한 화면에 보이는 이미지 수
 
-  function updateGallery() {
-    gallery.style.transform = `translateX(-${currentIndex * (100 / imagesPerView)}%)`;
-  }
+    function updateGallery() {
+      gallery.style.transform = `translateX(-${currentIndex * (100 / imagesPerView)}%)`;
+    }
 
-  window.prevImage = function() {
-    currentIndex = (currentIndex - 1 + (totalImages / imagesPerView)) % (totalImages / imagesPerView);
+    container.querySelector('.button.left').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + (totalImages / imagesPerView)) % (totalImages / imagesPerView);
+      updateGallery();
+    });
+
+    container.querySelector('.button.right').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % (totalImages / imagesPerView);
+      updateGallery();
+    });
+
+    // 초기 이미지 설정
     updateGallery();
-  }
-
-  window.nextImage = function() {
-    currentIndex = (currentIndex + 1) % (totalImages / imagesPerView);
-    updateGallery();
-  }
-
-  // 초기 이미지 설정
-  updateGallery();
+  });
 
   // 페이지 타이틀 투명도 조정
   window.addEventListener('scroll', function() {
@@ -258,5 +260,20 @@
     const maxOpacity = 0.6;
     const opacity = Math.min(scrollPosition / 500, maxOpacity); // 스크롤에 따라 투명도 조정
     imgContainer.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+  });
+
+  document.querySelectorAll('.content-detail-section .gallery-filters li').forEach(filter => {
+    filter.addEventListener('click', function() {
+      document.querySelector('.content-detail-section .gallery-filters .filter-active').classList.remove('filter-active');
+      this.classList.add('filter-active');
+      let filterValue = this.getAttribute('data-filter');
+      document.querySelectorAll('.content-detail-section .gallery div').forEach(item => {
+        if (filterValue === '*' || item.classList.contains(filterValue.substring(1))) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
   });
 })();
