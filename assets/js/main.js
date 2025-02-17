@@ -22,7 +22,7 @@
   headerToggleBtn.addEventListener('click', headerToggle);
 
   /**
-   * Hide mobile nav on same-page/hash links
+   * Hide mobile nav on same-page/hash linkimos
    */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
@@ -225,5 +225,30 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+
+  // 이미지 슬라이더 초기화
+  const gallery = document.getElementById('gallery');
+  const images = gallery.querySelectorAll('div');
+  const totalImages = images.length;
+  let currentIndex = 0;
+  const imagesPerView = 2; // 한 화면에 보이는 이미지 수
+
+  function updateGallery() {
+    gallery.style.transform = `translateX(-${currentIndex * (100 / imagesPerView)}%)`;
+  }
+
+  window.prevImage = function() {
+    currentIndex = (currentIndex - 1 + (totalImages / imagesPerView)) % (totalImages / imagesPerView);
+    updateGallery();
+  }
+
+  window.nextImage = function() {
+    currentIndex = (currentIndex + 1) % (totalImages / imagesPerView);
+    updateGallery();
+  }
+
+  // 초기 이미지 설정
+  updateGallery();
 
 })();
