@@ -386,9 +386,9 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
+  color: rgb(220, 220, 220);
   background-color: var(--background-color);
-  font-size: 14px;
+  font-size: 11px;
   padding: 40px 0;
   position: relative;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
@@ -616,7 +616,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
+  background: color-mix(in srgb, var(--background-color), transparent 40%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1098,12 +1098,13 @@ section,
 
 @media (max-width: 575px) {
   .contact .info-wrap {
-    padding: 20px;
+    padding: 30px 10px 30px 0px;
   }
 }
 
 .contact .info-item {
   margin-bottom: 40px;
+  margin-left: -10px;
 }
 
 .contact .info-item i {
