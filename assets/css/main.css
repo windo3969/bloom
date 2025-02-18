@@ -492,7 +492,7 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 25px 0;
-  z-index: 1;
+  z-index: 100;
 }
 
 .page-title h1 {
@@ -721,7 +721,11 @@ section,
   margin-bottom: 40px;
 }
 
-.gallery-container .mini-button {
+.gallery-container h3{
+  width: 400px;
+}
+
+.mini-button {
   background-color: transparent;
   color: var(--accent-color);
   border: none;
@@ -1078,6 +1082,11 @@ section,
   background-color: var(--accent-color);
 }
 
+.right-align {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
@@ -1182,13 +1191,19 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
+.portfolio-details .portfolio-details-slider{
+  margin:0;
+}
+
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
+
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
+  margin-top: 10px;
   position: relative;
+  z-index: 1;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
@@ -1196,6 +1211,7 @@ section,
   height: 12px;
   background-color: color-mix(in srgb, var(--default-color), transparent 85%);
   opacity: 1;
+  z-index: 10;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
@@ -1339,6 +1355,8 @@ section,
   padding-bottom: 200%;
 }
 
+
+
 /*--------------------------------------------------------------
 # Content detail section
 --------------------------------------------------------------*/
@@ -1361,6 +1379,11 @@ section,
   padding: 0;
   list-style: none; 
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.content-detail-section .gallery-filters ul{
+  padding-inline-start: 0;
 }
 
 .content-detail-section .gallery-filters li {
@@ -1406,4 +1429,117 @@ section,
   .content-detail-section .gallery .category-item {
     margin-bottom: 10px;
   }
+}
+
+/*--------------------------------------------------------------
+# Content Detail Description Section
+--------------------------------------------------------------*/
+.content-detail-description .content-detail-description-slider{
+  margin:0;
+}
+
+.content-detail-description .content-detail-description-slider img {
+  width: 100%;
+
+}
+
+.content-detail-description .content-detail-description-slider .swiper-pagination {
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.content-detail-description .content-detail-description-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  opacity: 1;
+  z-index: 10;
+}
+
+.content-detail-description .content-detail-description-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+.content-detail-description .content-detail-description-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.content-detail-description .content-detail-description-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.content-detail-description .content-detail-description-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.content-detail-description .content-detail-description-info ul li+li {
+  margin-top: 10px;
+}
+
+.content-detail-description .content-detail-description-description {
+  padding-top: 30px;
+}
+
+.content-detail-description .content-detail-description-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.content-detail-description .content-detail-description-description p {
+  padding: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.content-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.content-detail-table th, .content-detail-table td {
+  padding: 10px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  text-align: left;
+}
+
+.content-detail-table th {
+  background-color: var(--surface-color);
+  color: var(--heading-color);
+  font-weight: 700;
+}
+
+.content-detail-table td {
+  background-color: var(--background-color);
+  color: var(--default-color);
+}
+
+.crew-leader-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.crew-leader-btn {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.content-detail-table th{
+  background-color: rgb(240, 240, 240);
 }
