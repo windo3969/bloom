@@ -1543,3 +1543,83 @@ section,
 .content-detail-table th{
   background-color: rgb(240, 240, 240);
 }
+
+/*--------------------------------------------------------------
+# Crew Section
+--------------------------------------------------------------*/
+
+.crew-page h5{
+  font-size: 0.9rem;
+  margin-bottom: 0px;
+}
+
+.crew-page p{
+  font-size: 0.7rem;
+}
+
+.crew-page .crew-card {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+.crew-page .crew-card-body {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.crew-page .crew-card-img {
+  width: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+#pagination button {
+  background-color: rgb(240, 240, 240);
+  color: black;
+  border: none;
+  padding: 3px 9px;
+  margin: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#pagination button:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: white;
+}
+
+#pagination button:focus {
+  outline: none;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: white;
+}
+#pagination button.focus {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: white;
+}
+
+#pagination .left-button,
+#pagination .right-button {
+  background-color: transparent;
+  color: var(--contrast-color);
+  border: none;
+  padding: 3px 9px;
+  margin: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#pagination .left-button:hover,
+#pagination .right-button:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+#pagination .left-button:focus,
+#pagination .right-button:focus {
+  outline: none;
+}
+
