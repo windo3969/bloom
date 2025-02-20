@@ -816,6 +816,7 @@ section,
 .description .emphasis {
   font-size: 0.8rem;
   font-weight: 400;
+  color: var(--accent-color);
 }
 
 .detail-button {
@@ -1275,6 +1276,8 @@ section,
 .portfolio-details .portfolio-description {
   padding-top: 30px;
 }
+
+
 
 .portfolio-details .portfolio-description h2 {
   font-size: 26px;
