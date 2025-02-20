@@ -602,10 +602,16 @@ section,
   margin-bottom: 20px;
 }
 
+.section-title h1{
+  color:white;
+}
+
 .section-title button:hover {
   background-color: transparent;
   border-color: var(--accent-color);
   transform: translateY(-3px);
+}
+.section-title h1:hover{
   color: black;
 }
 
