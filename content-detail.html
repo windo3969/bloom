@@ -12,11 +12,9 @@
   <link href="assets/img/favicon.ico" rel="icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -52,14 +50,6 @@
       <h1 class="sitename">Bloom</h1>
     </a>
 
-    <div class="social-links text-center">
-      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-    </div>
-
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="index.html"><i class="bi bi-house navicon"></i>홈</a></li>
@@ -67,8 +57,8 @@
         <li><a href="content-detail.html" class="active"><i class="bi bi-images navicon"></i> 컨텐츠</a></li>
         <li><a href="crew.html"><i class="bi bi-hdd-stack navicon"></i> 크리에이터</a></li>
         <li><a href="index.html"><i class="bi bi-envelope navicon"></i> 연락</a></li>
-      </ul>   
-    </nav> 
+      </ul>
+    </nav>
 
   </header>
 
@@ -90,85 +80,147 @@
     <!-- Content Detail Section Section -->
     <section id="content-detail-section" class="content-detail-section section" style="padding: 0px;">
       <!-- Section Title -->
-      <div class="img-container">
+      <div class="img-container" style="margin-bottom: 50px;">
         <div class="img-box" style="background-image: url('assets/img/9d12_001.png');">
         </div>
       </div>
 
-      <!-- 필터 버튼 -->
-      <div class="gallery-filters" data-aos="fade-up">
-        <ul>
-          <li class="filter-active" data-filter="*">모두 보기</li>
-          <li data-filter=".category1">카테고리 1</li>
-        </ul>
-        <ul>
-          <li data-filter=".category2">카테고리 2</li>
-          <li data-filter=".category3">카테고리 3</li>
-        </ul>
-      </div>
 
       <!-- 이미지 슬라이더 -->
-      <div class="gallery-container align-items-center" data-aos="fade-up">
-        <div class="gallery mx-2" id="gallery">
-          <div class="category1 category-item">
-            <img src="/assets/img/portfolio/app-1.jpg" alt="Image 1">
+      <div class="gallery-container">
+        <div class="gallery mx-2 row" id="gallery">
+          <div class="category-item col-6">
+              <img src="/assets/img/content/001.png" alt="Image 1">
+              <div class="description">
+                <p class="title">모루마법사</p>
+                <p class="content">나만의 아기자기 모루인형 만들기</p>
+                <p class="emphasis">모집중</p>
+              </div>
+          </div>
+          <div class="category-item col-6">
+            <img src="/assets/img/content/002.png" alt="Image 1">
             <div class="description">
-              <p class="title">설명 1-1 title</p>
-              <p class="content">설명 1-2 내용 이것은 굉장하고 엄청난 내용입니다.</p>
-              <p class="emphasis">설명 1-3 강조</p>
+              <p class="title">캘리그라피아</p>
+              <p class="content">인생 명언 이쁘게 남겨가고 싶으신 분!</p>
+              <p class="emphasis">모집중</p>
             </div>
           </div>
-          <div class="category1 category-item">
-            <img src="/assets/img/portfolio/app-1.jpg" alt="Image 1">
+          <div class="category-item col-6">
+            <img src="/assets/img/content/003.png" alt="Image 1">
             <div class="description">
-              <p class="title">설명 1-2 title</p>
-              <p class="content">설명 1-2 내용 이것은 굉장하고 엄청난 내용입니다.</p>
-              <p class="emphasis">설명 1-2 강조</p>
+              <p class="title">색감 연구소</p>
+              <p class="content">글로 표현할 수 없는 깊은 것은 그림으로 표현해야 합니다.</p>
+              <p class="emphasis">모집중</p>
             </div>
           </div>
-          <div class="category1 category-item">
-            <img src="/assets/img/portfolio/app-1.jpg" alt="Image 1">
+          <div class="category-item col-6">
+            <img src="/assets/img/content/004.png" alt="Image 1">
             <div class="description">
-              <p class="title">설명 1-3 title</p>
-              <p class="content">설명 1-3 내용 이것은 굉장하고 엄청난 내용입니다.</p>
-              <p class="emphasis">설명 1-3 강조</p>
+              <p class="title">Handy Craft</p>
+              <p class="content">손으로 만드는 소소한 소품들</p>
+              <p class="emphasis">모집중</p>
             </div>
           </div>
-
-        <div class="category2 category-item">
-          <img src="/assets/img/portfolio/app-2.jpg" alt="Image 2">
-          <div class="description">
-            <p class="title">설명 2-1 title</p>
-            <p class="content">설명 2-1 내용 이것은 굉장하고 엄청난 내용입니다.</p>
-            <p class="emphasis">설명 2-1 강조</p>
+          <div class="category-item col-6">
+            <img src="/assets/img/content/005.png" alt="Image 2">
+            <div class="description">
+              <p class="title">Clay & Play</p>
+              <p class="content">클레이 앤 플레이, 몰입감 있는 클레이 프로젝트</p>
+              <p class="emphasis">모집중</p>
+            </div>
           </div>
-        </div>
-        <div class="category2 category-item ">
-          <img src="/assets/img/portfolio/app-2.jpg" alt="Image 2">
-          <div class="description">
-            <p class="title">설명 2-2 title</p>
-            <p class="content">설명 2-2 내용 이것은 굉장하고 엄청난 내용입니다.</p>
-            <p class="emphasis">설명 2-2 강조</p>
+          <div class="category-item col-6">
+            <img src="/assets/img/content/006.png" alt="Image 2">
+            <div class="description">
+              <p class="title">펜 끝에서 피어나다</p>
+              <p class="content">펜 끝에서 피어나는 작품을 감상해보세요.</p>
+              <p class="emphasis">모집중</p>
+            </div>
           </div>
-        </div>
-
-      <div class="category3 category-item">
-        <img src="/assets/img/portfolio/app-3.jpg" alt="Image 3">
-        <div class="description">
-          <p class="title">설명 3-1 title</p>
-          <p class="content">설명 3-1 내용 이것은 굉장하고 엄청난 내용입니다.</p>
-          <p class="emphasis">설명 3-1 강조</p>
+          <div class="category-item col-6">
+            <img src="/assets/img/content/007.png" alt="Image 3">
+            <div class="description">
+              <p class="title">문장 수집가</p>
+              <p class="content">감성 독서와 글쓰기를 동시에 즐기고 싶은 분을 찾습니다.</p>
+              <p class="emphasis">모집중</p>
+            </div>
+          </div>
+          <div class="category-item col-6">
+            <img src="/assets/img/content/008.png" alt="Image 3">
+            <div class="description">
+              <p class="title">책벌레들의 밤</p>
+              <p class="content">책을 좋아하는 사람들의 밤.</p>
+              <p class="emphasis">모집중</p>
+            </div>
+          </div>
+          <div class="category-item col-6">
+            <img src="/assets/img/content/009.png" alt="Image 3">
+            <div class="description">
+              <p class="title">시네마토크</p>
+              <p class="content">재미와 유익을 모두 갖춘 영화 비평.</p>
+              <p class="emphasis">모집중</p>
+            </div>
+          </div>
+          <div class="category-item col-6">
+            <img src="/assets/img/content/010.png" alt="Image 3">
+            <div class="description">
+              <p class="title">필름메이커스</p>
+              <p class="content">영상제작, 최신기술로 전문가 흉내 충분히 가능!</p>
+              <p class="emphasis">모집중</p>
+            </div>
+          </div>
+          <div class="category-item col-6">
+            <img src="/assets/img/content/011.png" alt="Image 3">
+            <div class="description">
+              <p class="title">OST 감상</p>
+              <p class="content">영화 속 멜로디를 즐기고 싶은 분을 찾습니다.</p>
+              <p class="emphasis">모집중</p>
+            </div>
+          </div>
+          <div class="category-item col-6">
+            <img src="/assets/img/content/012.png" alt="Image 3">
+            <div class="description">
+              <p class="title">버스킹노트</p>
+              <p class="content">노래와 악기연주에 관심 있으신분 환영~</p>
+              <p class="emphasis">모집중</p>
+            </div>
+          </div>
+          <div class="category-item col-6">
+            <img src="/assets/img/content/013.png" alt="Image 3">
+            <div class="description">
+              <p class="title">비트메이커스</p>
+              <p class="content">나만의 소울을 찾아서 떠나는 음악 여행행</p>
+              <p class="emphasis">모집중</p>
+            </div>
+          </div>
+          <div class="category-item col-6">
+            <img src="/assets/img/content/014.png" alt="Image 3">
+            <div class="description">
+              <p class="title">하이킹 러버즈</p>
+              <p class="content">그냥 등산이 아니다.. 인생을 등반한다.!</p>
+              <p class="emphasis">모집중</p>
+            </div>
+          </div>
+          <div class="category-item col-6">
+            <img src="/assets/img/content/015.png" alt="Image 3">
+            <div class="description">
+              <p class="title">프로 토커</p>
+              <p class="content">자신없는 분일수록 환영!</p>
+              <p class="emphasis">모집중</p>
+            </div>
+          </div>
+          <div class="category-item col-6">
+            <img src="/assets/img/content/016.png" alt="Image 3">
+            <div class="description">
+              <p class="title">타로로</p>
+              <p class="content">타로로 보는 내 미래는 어떨까요?</p>
+              <p class="emphasis">모집중</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="category3 category-item">
-        <img src="/assets/img/portfolio/app-3.jpg" alt="Image 3">
-        <div class="description">
-          <p class="title">설명 3-2 title</p>
-          <p class="content">설명 3-2 내용 이것은 굉장하고 엄청난 내용입니다.</p>
-          <p class="emphasis">설명 3-2 강조</p>
-          </div>
-        </div>
-      </div>
+      <div id="pagination" class="d-flex justify-content-center">
+        <!-- 페이지네이션 버튼들이 여기에 생성됩니다 -->
       </div>
     </section><!-- /Content Detail Section Section -->
   </main>
@@ -205,6 +257,96 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    const categoryItems = document.querySelectorAll('.category-item');
+    const itemsPerPage = 8;
+    const totalPages = Math.ceil(categoryItems.length / itemsPerPage);
+    let currentPage = 1;
+
+    function showPage(page) {
+      const start = (page - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+
+      categoryItems.forEach((item, index) => {
+        item.style.display = (index >= start && index < end) ? 'block' : 'none';
+      });
+
+      updateFocus();
+    }
+
+    function createPagination() {
+      const pagination = document.getElementById('pagination');
+      pagination.innerHTML = '';
+
+      const prevButton = document.createElement('button');
+      prevButton.innerHTML = '<i class="bi bi-chevron-left"></i>';
+      prevButton.classList.add('left-button');
+      prevButton.onclick = () => {
+        if (currentPage > 1) {
+          currentPage--;
+          showPage(currentPage);
+        }
+      };
+      pagination.appendChild(prevButton);
+
+      for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement('button');
+        button.textContent = i;
+        button.onclick = () => {
+          currentPage = i;
+          showPage(currentPage);
+        };
+        pagination.appendChild(button);
+      }
+
+      const nextButton = document.createElement('button');
+      nextButton.innerHTML = '<i class="bi bi-chevron-right"></i>';
+      nextButton.classList.add('right-button');
+      nextButton.onclick = () => {
+        if (currentPage < totalPages) {
+          currentPage++;
+          showPage(currentPage);
+        }
+      };
+      pagination.appendChild(nextButton);
+
+      showPage(currentPage);
+    }
+
+    function updateFocus() {
+      const buttons = document.querySelectorAll('#pagination button');
+      buttons.forEach((button, index) => {
+        if (index === currentPage) {
+          button.classList.add('focus');
+        } else {
+          button.classList.remove('focus');
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      createPagination();
+    });
+
+    function loadPage(pageNumber) {
+      // ... 기존 코드 ...
+      renderItems(data);
+      applyLayout();
+    }
+
+    function renderItems(data) {
+      // 데이터를 기반으로 HTML을 생성하는 코드
+    }
+
+    function applyLayout() {
+      const container = document.querySelector('.category-container');
+      const items = container.querySelectorAll('.category-item');
+      items.forEach(item => {
+        item.style.flex = '0 0 50%'; // 2열 레이아웃
+      });
+    }
+  </script>
 
 </body>
 
