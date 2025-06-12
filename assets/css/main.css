@@ -19,18 +19,19 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-  --background-color: #ffffff;
+  --background-color: #FFF5F8;
   /* Background color for the entire website, including individual sections */
   --default-color: #272829;
   /* Default color used for the majority of the text content across the entire website */
   --heading-color: #050d18;
   /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #149ddd;
+  --accent-color: #FF6B9D;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff;
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff;
   /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -1729,4 +1730,19 @@ section,
 
 .modal-content button:hover {
   color: rgb(91, 91, 91);
+}
+
+@media (max-width: 768px) {
+  .mini-button, .crew-leader-btn {
+    min-height: 44px;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-detail-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }
